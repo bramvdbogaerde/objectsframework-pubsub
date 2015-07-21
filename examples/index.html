@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>PubSub Test</title>
+		<script>
+			var ws = new WebSocket("ws://localhost:3000/app/time")
+
+			ws.onopen = function(){
+				console.log("Socket openend")
+			}
+
+			ws.onmessage = function(msg){
+				console.log(msg)
+			}
+		</script>
+	</head>
+	<body>
+
+	</body>
+</html>
